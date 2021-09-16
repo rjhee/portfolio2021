@@ -31,17 +31,18 @@
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
       </div>
       <header class="nav">
         <h1 class="logo">NOH JAEHEE</h1>
         <nav>
           <h2 class="sr-only">네비게이션 메뉴</h2>
           <ul class="nav-menu">
-            <li><button>about me</button></li>
-            <li><button>skill</button></li>
-            <li><button>project</button></li>
-            <li><button>more</button></li>
-            <li><button>cunnect</button></li>
+            <li><button class="nav-about">about me</button></li>
+            <li><button class="nav-skill">skill</button></li>
+            <li><button class="nav-project">project</button></li>
+            <li><button class="nav-cunnect">cunnect</button></li>
           </ul>
         </nav>
       </header>
@@ -244,11 +245,23 @@
       <ul class="project-contents"></ul>
     </section>
     <div class="project-detail-cover">
-      <button class="close-btn">X</button>
+      <button class="close-btn">
+        <i class="far fa-times-circle"></i>
+      </button>
       <section class="project-detail">
         <h2 class="project-title"></h2>
         <div>
-          <span class="project-img"></span>
+          <div class="project-img-cover">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-circle-left"></i>
+            </button>
+            <div class="img-cover">
+              <span class="project-img"></span>
+            </div>
+            <button class="next-btn">
+              <i class="fas fa-chevron-circle-right"></i>
+            </button>
+          </div>
           <p class="project-desc"></p>
         </div>
       </section>
