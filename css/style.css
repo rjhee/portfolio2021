@@ -228,9 +228,13 @@ a {
 
 .about-me p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 3rem;
+}
+
+.about-me p:nth-child(3) {
+  font-weight: 400;
 }
 
 /* skill  */
@@ -570,11 +574,20 @@ body::after {
   .title {
     margin-bottom: 1rem;
   }
+
   .nav {
     flex-direction: column;
   }
 
+  .nav nav {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
   .logo {
+    transform: translateY(50px);
     font-size: 1.4rem;
     margin-bottom: 2rem;
   }
