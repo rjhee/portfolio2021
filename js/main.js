@@ -98,7 +98,7 @@ projectContents.addEventListener('click', (e) => {
       let span = document.createElement('span');
       span.setAttribute('class', 'project-img');
       imgCover.appendChild(span);
-      span.style.backgroundImage = `url(../images/${img})`;
+      span.style.backgroundImage = `url(./images/${img})`;
       imgCover.removeChild(span.firstChild);
     });
   }
@@ -111,7 +111,7 @@ closeBtn.addEventListener('click', () => {
 function displayImg(title, img) {
   return `
   <li>
-    <div class="project-content-img" style="background-image: url(../images/${img[0]});"> 
+    <div class="project-content-img" style="background-image: url(./images/${img[0]});"> 
       <span class="hidden">${title}</span>
       <span class="hidden">${img}</span>
     </div>

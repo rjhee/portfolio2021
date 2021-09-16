@@ -196,11 +196,11 @@ a {
 
 .profile-img span {
   display: block;
-  background: url(../images/profile.png);
+  background: url(../images/myimg.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 10%;
   background-size: cover;
-  width: 100%;
+  width: 150px;
   height: 100%;
 }
 
