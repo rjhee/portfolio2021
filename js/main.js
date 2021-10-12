@@ -125,26 +125,28 @@ const percentNum = document.querySelectorAll('.percent-num');
 let number = -1;
 function displayNumbering() {
   number++;
+  percentNum.forEach((span) => (span.style.color = '#0061a8'));
+
   for (let i = 0; i < percentNum.length; i++) {
     let item = percentNum.item(i);
     switch (item.id) {
       case 'html':
-        if (number <= 90) {
+        if (number <= 95) {
           item.innerHTML = `${number}%`;
         }
         break;
       case 'css':
-        if (number <= 90) {
+        if (number <= 95) {
           item.innerHTML = `${number}%`;
         }
         break;
       case 'js':
-        if (number <= 89) {
+        if (number <= 90) {
           item.innerHTML = `${number}%`;
         }
         break;
       case 'jquery':
-        if (number <= 85) {
+        if (number <= 87) {
           item.innerHTML = `${number}%`;
         }
         break;
@@ -168,39 +170,39 @@ function displayNumbering() {
   }
 }
 
-const html2 = document.querySelectorAll('#html2 li');
-const css2 = document.querySelectorAll('#css2 li');
-const js2 = document.querySelectorAll('#js2 li');
-const jquery2 = document.querySelectorAll('#jquery2 li');
-const react2 = document.querySelectorAll('#react2 li');
-const sass2 = document.querySelectorAll('#sass2 li');
-const vue2 = document.querySelectorAll('#vue2 li');
+const percentImg = document.querySelectorAll('.percent-img li');
 
-function onGageColor(li) {
-  if (li.className == 'on') {
-    li.style.backgroundColor = '#0061a8';
+let i = 0;
+function onGageColor() {
+  if (i < 70) {
+    percentImg[i].className === 'on' &&
+      (percentImg[i].style.backgroundColor = '#009cff');
   }
+
+  i = i + 1;
 }
 
-function displayPercent() {
-  html2.forEach((li) => onGageColor(li));
-  css2.forEach((li) => onGageColor(li));
-  js2.forEach((li) => onGageColor(li));
-  jquery2.forEach((li) => onGageColor(li));
-  react2.forEach((li) => onGageColor(li));
-  sass2.forEach((li) => onGageColor(li));
-  vue2.forEach((li) => onGageColor(li));
+const bgPattern = document.querySelector('.bg-pattern');
+
+function bgPatternCssChange(number) {
+  bgPattern.style.zIndex = number;
 }
+const Z_NUMBER_MINUS = '-99999';
+const Z_NUMBER_PLUS = '1';
 
 const nav = document.querySelector('.nav');
+const skill = document.querySelector('.skill');
+
 window.addEventListener('scroll', (e) => {
   let userScrollTop = this.scrollY;
-  if (userScrollTop > 1000) {
+  if (userScrollTop > skill.offsetTop - 500) {
     displayNumbering();
-    displayPercent();
     navColorChange('#009cff');
+    onGageColor();
+    bgPatternCssChange(Z_NUMBER_MINUS);
   } else {
     navColorChange('#fff');
+    bgPatternCssChange(Z_NUMBER_PLUS);
   }
 });
 
